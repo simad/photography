@@ -1,5 +1,5 @@
 # Base configs
-baseurl: "http://simad.github.io"
+baseurl: "https://simad.github.io"
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 #google_analytics: ""
@@ -13,7 +13,7 @@ header:
  subtitle: "by Silvia"
 footer:
  name: "Something"
- bio: "Something soemthing."
+ bio: "Something something."
  github: "github"
 web_design: "AJ"
 social_urls:
