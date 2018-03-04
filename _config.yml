@@ -8,6 +8,9 @@ image_thumbs_loc: "/images/thumbs"
 # Collection settings
 collections:
   - photos
+
+  - sections
+
 # UI configs
 title: "Photography by Silvia"
 subtitle: ""
@@ -18,7 +21,6 @@ header:
 web_design: "AJ"
 
 social:
-
   - name: Instagram
     icon: instagram
     username: chasingwolves.photography

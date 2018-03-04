@@ -17,7 +17,7 @@ gulp.task('examples', function() {
 });
 
 function createPhotoFile (name) {
-  fs.writeFile('_photos/' + name + '.md', '---\nfilename: ' + name + '\n---');
+  fs.writeFile('_photos/' + name + '.md', '---\nsection: 0\nfilename: ' + name + '\n---');
 }
 
 gulp.task('resize', function () {

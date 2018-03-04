@@ -1429,6 +1429,7 @@
 #header .social {
 	padding-left: 10px;
 	padding-right: 10px;
+	display: inline-block;
 }
 
 			#header h1 a {
@@ -1557,6 +1558,7 @@
 }
 #main .section span {
 	font-size: 1.2em;
+	margin-left: 1em;
 }
 		#main .thumb {
 			-moz-transition: opacity 1.25s ease-in-out;
@@ -1968,7 +1970,9 @@
 		}
 
 		@media screen and (max-width: 480px) {
-
+			#main .section span {
+				display: none;
+			}
 			#main .thumb {
 				-moz-transition-delay: 1.175s;
 				-webkit-transition-delay: 1.175s;
