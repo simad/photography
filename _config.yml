@@ -12,13 +12,13 @@ collections:
   - sections
 
 # UI configs
-title: "Photography by Silvia"
+title: "Chasing Wolves Photography"
 subtitle: ""
 author: "Silvia"
 header:
  title: "Chasing Wolves"
- subtitle: "Photography"
-web_design: "AJ"
+ subtitle: "Photography Project"
+web_design: "Silvia"
 
 social:
   - name: Instagram

@@ -297,6 +297,7 @@
             usePopupCaption: true,
             usePopupCloser: true,
             usePopupDefaultStyling: false,
+            popupBlankCaptionText: '',
             usePopupForceClose: true,
             usePopupLoader: true,
             usePopupNav: true,

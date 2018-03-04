@@ -25,7 +25,7 @@ layout: default
             {% for section in sections %}
             {% if section.header %}
                 <div class="section">
-                    <h1><strong>{{section.header}}</strong></h1> <span>{{section.description}}</span>
+                    <span class="header"><strong>{{section.header}}</strong></span> <span class="description">{{section.description}}</span>
                 </div>
             {% endif %}
                 {% for photo in section_link.items %}
@@ -33,8 +33,7 @@ layout: default
                     <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ photo.filename }}" class="image">
                         <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ photo.filename }}" alt=""
                              data-name="{{ photo.filename }}"/></a>
-                    {% if photo.title %}<h2>{{photo.name}}</h2> {% endif %}
-                    {% if photo.caption %}<p>{{photo.caption}}</p> {% endif %}
+                    {% if photo.caption %}<h2>{{photo.caption}}</h2> {% endif %}
                 </article>
                 {% endfor %}
             {% endfor %}

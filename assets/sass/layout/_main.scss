@@ -120,6 +120,25 @@
 			}
 		}
 
+		.section {
+			width: 100%;
+			margin: (_size(element-margin) * 2) 0 (_size(element-margin) * 0.2) (_size(element-margin) * 2);
+
+			span {
+				color: _palette(fg);
+				letter-spacing: _font(kerning-alt);
+				font-size: 1.25em;
+				text-transform: uppercase;
+			}
+			.header {
+				color: _palette(fg-bold);
+			}
+
+			@include breakpoint(small) {
+				display: none;
+			}
+		}
+
 		// Default.
 			@include thumb(
 				_misc(main-layout, default, rows),
@@ -158,6 +177,14 @@
 				);
 			}
 
+
+		@include breakpoint(small) {
+			#main {
+				.section {
+					display: none;
+				}
+			}
+		}
 		// XSmall.
 			@include breakpoint(xsmall) {
 				@include thumb(

@@ -38,7 +38,7 @@
 			line-height: 1;
 			margin: 0;
 			vertical-align: middle;
-
+			padding-right: 10px;
 			a {
 				border: 0;
 				color: inherit;
@@ -48,7 +48,11 @@
 				}
 			}
 		}
-
+		.social {
+			padding-left: 10px;
+			padding-right: 10px;
+			display: inline-block;
+		}
 		nav {
 			position: absolute;
 			right: 0;
@@ -101,10 +105,10 @@
 		#header {
 			@include vendor('transform', 'translateY(0)');
 			bottom: auto;
-			height: _size(header);
+			height: 5em;
 			padding: 0 1em;
 			top: 0;
-
+			line-height: 2.5em;
 			body.loading & {
 				@include vendor('transform', 'translateY(#{_size(header) * -0.85})');
 			}

@@ -10,12 +10,6 @@ var fs = require('fs');
 var tap = require('gulp-tap');
 var path = require('path');
 
-gulp.task('examples', function() {
-  return gulp.src('./examples/*.html')
-  .pipe(debug())
-  .pipe(gulp.dest('./build'));
-});
-
 function createPhotoFile (name) {
   fs.writeFile('_photos/' + name + '.md', '---\nsection: 0\nfilename: ' + name + '\n---');
 }
