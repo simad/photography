@@ -1,25 +1,41 @@
 # Base configs
-baseurl: "https://simad.github.io/photography"
+#url: "https://simad.github.io"
+baseurl: "/photography"
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 #google_analytics: ""
 
+# Collection settings
+collections:
+  - photos
 # UI configs
 title: "Photography by Silvia"
 subtitle: ""
 author: "Silvia"
 header:
- title: "PATTERNS"
- subtitle: "by Silvia"
-footer:
- name: "Something"
- bio: "Something something."
- github: "github"
+ title: "Chasing Wolves"
+ subtitle: "Photography"
 web_design: "AJ"
-social_urls:
-#  facebook: "https://www.facebook.com/ramswaroop"
-#  twitter: "https://www.twitter.com/ramswarooppatra"
-#  instagram: "https://www.instagram.com/ramswarooppatra"
-#  dribbble: "https://dribbble.com/ramswaroop"
-#  linkedin: "https://in.linkedin.com/in/ramswarooppatra"
-#  github: "https://www.github.com/ramswaroop"
+
+social:
+
+  - name: Instagram
+    icon: instagram
+    username: chasingwolves.photography
+    url: https://www.instagram.com/chasingwolves.photography
+    desc: Follow me on Instagram
+    share: false
+
+  - name: Twitter
+    icon: twitter
+    username: silmnd
+    url: https://www.twitter.com/silmnd
+    desc: Follow me on Twitter
+    share: true
+
+  - name: Email
+    icon: envelope-o
+    username: silvia@divisionbyzero.co
+    url: mailto:silvia@divisionbyzero.co
+    desc: Shoot me an Email
+    share: false

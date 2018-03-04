@@ -6,9 +6,25 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var del = require('del');
+var fs = require('fs');
+var tap = require('gulp-tap');
+var path = require('path');
+
+gulp.task('examples', function() {
+  return gulp.src('./examples/*.html')
+  .pipe(debug())
+  .pipe(gulp.dest('./build'));
+});
+
+function createPhotoFile (name) {
+  fs.writeFile('_photos/' + name + '.md', '---\nfilename: ' + name + '\n---');
+}
 
 gulp.task('resize', function () {
     return gulp.src('images/*.*')
+        .pipe(tap(function(file, t) {
+          createPhotoFile(path.basename(file.path))
+        }))
         .pipe(imageResize({
             width: 1024,
             imageMagick: true
