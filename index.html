@@ -14,6 +14,8 @@ layout: default
                 class="label">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span></a>
             {% endfor %}
                 /</div>
+            <span class="made-by">Made with <i class="fa fa-heart" ></i> and <i class="fa fa-coffee" ></i> by <a href="https://twitter.com/silmnd" target="_blank">Silvia</a></span>
+
         </div>
     </header>
 
@@ -25,7 +27,8 @@ layout: default
             {% for section in sections %}
             {% if section.header %}
                 <div class="section">
-                    <span class="header"><strong>{{section.header}}</strong></span> <span class="description">{{section.description}}</span>
+                    <span class="header"><strong>{{section.header}}</strong></span>
+                    <span class="description">{{section.description}}</span>
                 </div>
             {% endif %}
                 {% for photo in section_link.items %}
@@ -39,30 +42,4 @@ layout: default
             {% endfor %}
         {% endfor %}
     </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="panel">
-        <div class="inner split">
-            <div>
-                <section>
-                    <h2>Get in touch</h2>
-                    <form method="post" action="#">
-                        <div class="field half first">
-                            <input type="text" name="name" id="name" placeholder="Name"/>
-                        </div>
-                        <div class="field half">
-                            <input type="text" name="email" id="email" placeholder="Email"/>
-                        </div>
-                        <div class="field">
-                            <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send" class="special"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </section>
-            </div>
-        </div>
-    </footer>
 </div>

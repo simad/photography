@@ -48,6 +48,13 @@
 				}
 			}
 		}
+		.made-by {
+			float: right;
+			margin-right: 10px;
+			.fa {
+				color: _palette(accent1);
+			}
+		}
 		.social {
 			padding-left: 10px;
 			padding-right: 10px;
@@ -116,7 +123,9 @@
 			h1 {
 				font-size: 0.9em;
 			}
-
+			.made-by {
+				display: none;
+			}
 			nav {
 				> ul {
 					> li {
