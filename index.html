@@ -8,11 +8,11 @@ layout: default
     <!-- Header -->
     <header id="header">
         <div>
-        <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
+            <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
             <div class="social">{% for social in site.social %}
-          /  <a target="_blank" href="{{ social.url }}" class="social icon fa-{{ social.icon }}" title="{{ social.desc }}"><span
-                class="label">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span></a>
-            {% endfor %}
+                /  <a target="_blank" href="{{ social.url }}" class="social icon fa-{{ social.icon }}" title="{{ social.desc }}"><span
+                    class="label">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span></a>
+                {% endfor %}
                 /</div>
             <span class="made-by">Made with <i class="fa fa-heart" ></i> and <i class="fa fa-coffee" ></i> by <a href="https://twitter.com/silmnd" target="_blank">Silvia</a></span>
 
@@ -21,25 +21,14 @@ layout: default
 
     <!-- Main -->
     <div id="main">
-        {% assign photos_grouped = site.photos | group_by: 'section' | sort: 'name' %}
-        {% for section_link in photos_grouped %}
-            {% assign sections = site.sections | where: "order", section_link.name %}
-            {% for section in sections %}
-            {% if section.header %}
-                <div class="section">
-                    <span class="header"><strong>{{section.header}}</strong></span>
-                    <span class="description">{{section.description}}</span>
-                </div>
-            {% endif %}
-                {% for photo in section_link.items %}
-                <article class="thumb">
-                    <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ photo.filename }}" class="image">
-                        <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ photo.filename }}" alt=""
-                             data-name="{{ photo.filename }}"/></a>
-                    {% if photo.caption %}<h2>{{photo.caption}}</h2> {% endif %}
-                </article>
-                {% endfor %}
-            {% endfor %}
+        {% assign photos_sorted = site.photos | sort: 'section' %}
+        {% for photo in photos_sorted %}
+        <article class="thumb">
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ photo.filename }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ photo.filename }}" alt=""
+                     data-name="{{ photo.filename }}"/></a>
+            {% if photo.caption %}<h2>{{photo.caption}}</h2> {% endif %}
+        </article>
         {% endfor %}
     </div>
 </div>
